@@ -2,15 +2,11 @@
   <section class="nav-cards wrap custom-container">
       {{#each categories as |c|}}
         <a
-          class="nav-card"
           href={{c.url}}
           data-category-id={{c.id}}
           data-notification-level={{c.notificationLevelString}}
           data-url={{c.url}}
-          class="category category-box category-box-{{c.slug}}
-            {{if c.isMuted 'muted'}}
-            {{if noCategoryStyle 'no-category-boxes-style'}}"
-        >
+          class="nav-card">
           <span class="icon"></span>
           <h3>
             {{category-title-before category=c}}
