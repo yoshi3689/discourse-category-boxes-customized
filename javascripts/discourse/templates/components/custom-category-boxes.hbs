@@ -1,11 +1,5 @@
 {{#if shouldRenderHeadings}}
   <section class="nav-cards wrap custom-container">
-    {% comment %} {{#if firstCategories}}
-      {{#if (theme-setting "first_categories_header")}}
-        <h1 class="custom-category-header">{{theme-setting
-            "first_categories_header"
-          }}</h1>
-      {{/if}} {% endcomment %}
       {{#each categories as |c|}}
         <a
           class="nav-card"
@@ -29,6 +23,6 @@
           <b class="nav-link">Learn more</b>
         </a>
       {{/each}}
-    {{/if}}
+    
   </section>
 {{/if}}
