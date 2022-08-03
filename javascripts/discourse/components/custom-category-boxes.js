@@ -7,8 +7,8 @@ export default Component.extend({
   router: service(),
   classNames: ["custom-category-boxes-container"],
   classNameBindings: ["noneSelected:none-selected"],
-  _allowedCategories(selectedCategories) {
-    // filters categories to only include selected categories for each section
+  init() {
+    this._super(...arguments);
     let availableCategories = this.site.categories.filter(category => {
       if (selectedCategories.indexOf(category.id) !== -1) {
         return true;
@@ -17,7 +17,7 @@ export default Component.extend({
       }
     });
     console.log(availableCategories);
-    return availableCategories;
+    this.set("categories", availableCategories);
   },
   @discourseComputed()
   shouldRenderHeadings() {
