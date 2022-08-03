@@ -9,13 +9,7 @@ export default Component.extend({
   classNameBindings: ["noneSelected:none-selected"],
   init() {
     this._super(...arguments);
-    let availableCategories = this.site.categories.filter(category => {
-      if (selectedCategories.indexOf(category.id) !== -1) {
-        return true;
-      } else {
-        return false;
-      }
-    });
+    let availableCategories = this.site.categories;
     console.log(availableCategories);
     this.set("categories", availableCategories);
   },
