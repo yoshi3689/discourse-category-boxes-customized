@@ -9,9 +9,7 @@ export default Component.extend({
   classNameBindings: ["noneSelected:none-selected"],
   init() {
     this._super(...arguments);
-    let availableCategories = this.site.categories;
-    console.log(availableCategories);
-    this.set("categories", availableCategories);
+    this.set("categories", this.site.categories);
   },
   @discourseComputed()
   shouldRenderHeadings() {
