@@ -16,7 +16,7 @@ export default Component.extend({
         return false;
       }
     });
-
+    console.log(availableCategories);
     return availableCategories;
   },
   @discourseComputed()
